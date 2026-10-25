@@ -97,21 +97,3 @@ if st.button("🚀 Mulai Pisahkan Audio", type="primary"):
 
         except Exception as e:
             st.error(f"Terjadi kesalahan saat memproses: {str(e)}")
-```
-
----
-
-### Langkah Publikasi ke Streamlit Cloud:
-
-1. Push ketiga file (`app.py`, `requirements.txt`, `packages.txt`) ke repositori **GitHub** Anda.
-2. Buka [share.streamlit.io](https://share.streamlit.io/) dan login dengan akun GitHub.
-3. Klik tombol **"New app"**.
-4. Pilih repositori GitHub Anda, masukkan cabang (branch) `main`, dan file utama `app.py`.
-5. Klik **Deploy!**
-
----
-
-### 💡 Hal yang Perlu Diperhatikan di Streamlit Cloud:
-* **Penggunaan RAM**: Server gratis Streamlit Cloud memiliki batas RAM sekitar 1 GB. Model AI `htdemucs` default ringan dan biasanya aman run di Streamlit Cloud.
-* **Proses CPU**: Karena Streamlit Cloud gratis running di CPU (tanpa GPU dedicated), pemrosesan lagu berdurasi 3-4 menit akan memakan waktu sekitar 1–3 menit.
-* **FFmpeg**: File `packages.txt` sangat krusial! Jangan sampai lupa menyertakannya agar Streamlit Cloud otomatis menginstall FFmpeg untuk konversi MP3/WAV.
